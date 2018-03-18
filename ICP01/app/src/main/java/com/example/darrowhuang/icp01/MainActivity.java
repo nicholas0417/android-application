@@ -9,15 +9,12 @@ import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
-import android.widget.RadioButton;
-import android.widget.RadioGroup;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
     String str="";
     String s="";
     String str2="";
-    double aa;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,27 +45,7 @@ public class MainActivity extends AppCompatActivity {
         Button btnA=(Button)findViewById(R.id.button24);
         Button btnS=(Button)findViewById(R.id.button25);
         Button btnE=(Button)findViewById(R.id.button23);
-        Button btnM=(Button)findViewById(R.id.button26);
-        Button btnD=(Button)findViewById(R.id.button27);
-        final Button btnDot=(Button)findViewById(R.id.button22);
-        final RadioButton rb01=(RadioButton)findViewById(R.id.radioButton);
-        final RadioButton rb02=(RadioButton)findViewById(R.id.radioButton2);
-        RadioGroup rg=(RadioGroup)findViewById(R.id.radioGroup);
 
-        rg.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(RadioGroup group, int checkedId) {
-                if(rb01.getId()==checkedId) {
-                    aa=aa/10;
-
-                    tv01.setText(String.valueOf(aa));
-                }
-                if(rb02.getId()==checkedId) {
-                    aa = aa / 16;
-                    tv01.setText(String.valueOf(aa));
-                }
-            }
-        });
 
         btn0.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -140,13 +117,6 @@ public class MainActivity extends AppCompatActivity {
                 tv01.setText(str);
             }
         });
-        btnDot.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v) {
-                str=str+btnDot.getText().toString();
-                tv01.setText(str);
-            }
-        });
         btnA.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
@@ -163,47 +133,26 @@ public class MainActivity extends AppCompatActivity {
                 str="";
             }
         });
-        btnM.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v) {
-                s="*";
-                str2=str;
-                str="";
-            }
-        });
-        btnD.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v) {
-                s="/";
-                str2=str;
-                str="";
-            }
-        });
         btnE.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-
+                Integer aa;
                 if(s=="+") {
-                    aa = Double.parseDouble(str2) + Double.parseDouble(str);
-                    tv01.setText(String.valueOf(aa));
+                    aa = Integer.parseInt(str2) + Integer.parseInt(str);
+                    tv01.setText(aa.toString());
                 }
                 else if (s=="-") {
-                    aa = Double.parseDouble(str2) - Double.parseDouble(str);
-                    tv01.setText(String.valueOf(aa));
-                }
-                else if (s=="*") {
-                    aa = Double.parseDouble(str2) * Double.parseDouble(str);
-                    tv01.setText(String.valueOf(aa));
-                }
-                else if (s=="/") {
-                    aa = Double.parseDouble(str2) / Double.parseDouble(str);
-                    tv01.setText(String.valueOf(aa));
+                    aa = Integer.parseInt(str2) - Integer.parseInt(str);
+                    tv01.setText(aa.toString());
                 }
                 else
                     aa=87;
 
             }
         });
+
+
+
     }
 
     @Override
