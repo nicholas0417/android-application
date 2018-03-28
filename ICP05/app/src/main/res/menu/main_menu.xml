@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:title="HW1"
+        android:id="@+id/mi01"
+        app:showAsAction="always"
+        android:icon="@drawable/ic_action_p01" />
+    <item android:title="ICP3"
+        android:id="@+id/mi02"
+        app:showAsAction="always"
+        android:icon="@drawable/ic_action_p02" />
+    <item android:title="HW3"
+        android:id="@+id/mi03"
+        app:showAsAction="always"
+        android:icon="@drawable/ic_action_p03" />
+</menu>
