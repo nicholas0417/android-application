@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Intent</string>
+    <string name="sec">This is the second</string>
+    <string name="sw">switch</string>
+    <string name="hg">身高</string>
+    <string name="wt">體重</string>
+    <string name="calc">計算</string>
+    <string name="back">Return</string>
+</resources>
