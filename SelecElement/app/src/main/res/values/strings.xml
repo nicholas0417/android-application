@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">SelecElement</string>
+    <string name="p1">原味披薩 $100</string>
+    <string name="p2">海鮮披薩 $120</string>
+    <string name="p3">牛肉披薩 $150</string>
+    <string name="calc">顯示</string>
+    <string name="one">三分熟</string>
+    <string name="two">五分熟</string>
+    <string name="three">七分熟</string>
+</resources>
