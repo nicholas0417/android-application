@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">TextElement</string>
+    <string name="height">身高(公分)</string>
+    <string name="weight">體重(公斤)</string>
+    <string name="nullDisp"></string>
+    <string name="calc">計算</string>
+    <string name="calcBMI">計算BMI</string>
+</resources>
